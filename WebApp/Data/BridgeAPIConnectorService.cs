@@ -10,10 +10,10 @@ namespace WebApp.Data
     public class BridgeAPIConnectorService
     {
 
-        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:25443/ffauth/";
-        private const string _urlToBridgeAPI = "https://forcebridgehackathon.force.eco:24443/ffwebservices/api/v3/";
-        private const string _user = "GitHub"; // User
-        private const string _password = "GitHub"; // Password of the user
+        private const string _urlForTokenGeneration = Environment.GetEnvironmentVariable("TOKENURL");
+        private const string _urlToBridgeAPI = Environment.GetEnvironmentVariable("APIENDPOINT");
+        private const string _user = Environment.GetEnvironmentVariable("USER"); // User
+        private const string _password = Environment.GetEnvironmentVariable("PASSWORD"); // Password of the user
 
         public Task<List<Workplace>> GetAllWorkplaces()
         {
