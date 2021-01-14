@@ -10,10 +10,10 @@ namespace WebApp.Data
     public class BridgeAPIConnectorService
     {
 
-        private const string _urlForTokenGeneration = Environment.GetEnvironmentVariable("TOKENURL");
-        private const string _urlToBridgeAPI = Environment.GetEnvironmentVariable("APIENDPOINT");
-        private const string _user = Environment.GetEnvironmentVariable("USER"); // User
-        private const string _password = Environment.GetEnvironmentVariable("PASSWORD"); // Password of the user
+        private string _urlForTokenGeneration = Environment.GetEnvironmentVariable("TOKENURL");
+        private string _urlToBridgeAPI = Environment.GetEnvironmentVariable("APIENDPOINT");
+        private string _user = Environment.GetEnvironmentVariable("USER"); // User
+        private string _password = Environment.GetEnvironmentVariable("PASSWORD"); // Password of the user
 
         public Task<List<Workplace>> GetAllWorkplaces()
         {
